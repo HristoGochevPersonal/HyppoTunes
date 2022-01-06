@@ -14,7 +14,7 @@ import java.io.File
 import java.util.concurrent.TimeUnit
 
 object RemoteSongsRepository : Closeable {
-    private const val serverIP = "192.168.1.108"
+    private const val serverIP = "10.0.2.2"
     private const val serverPort = 8980
     private var channel =
         ManagedChannelBuilder.forAddress(serverIP, serverPort).usePlaintext().build()
