@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package songs;
+
+service SongsService {
+  rpc Get(Request) returns (stream Chunk);
+}
+
+message Chunk {
+  bytes buffer = 1;
+  bool ready = 2;
+}
+
+message Request {
+  string name = 1;
+  string artist = 2;
+}

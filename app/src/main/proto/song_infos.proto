@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package song_infos;
+
+service SongInfosService {
+  rpc GetByName(Request) returns (stream Response);
+}
+
+message Response {
+  string name = 1;
+  string artist = 2;
+  bytes image = 3;
+}
+
+message Request {
+  string name = 1;
+}

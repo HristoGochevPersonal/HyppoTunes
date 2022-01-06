@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group0">
+        <item android:title="@string/browse_songs">
+            <menu>
+                <item
+                    android:id="@+id/tab0"
+                    android:icon="@drawable/note_image_gray"
+                    android:title="@string/mixed_songs" />
+                <item
+                    android:id="@+id/tab1"
+                    android:icon="@drawable/download"
+                    android:title="@string/browse_local" />
+            </menu>
+        </item>
+    </group>
+
+    <item
+        android:id="@+id/tab2"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="@string/about" />
+
+</menu>

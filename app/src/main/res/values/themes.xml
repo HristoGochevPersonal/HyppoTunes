@@ -1,0 +1,6 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HyppoTunes"  parent="carbon_Theme.Light.DarkPrimaryColor.NoActionBar">
+
+    </style>
+</resources>

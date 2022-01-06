@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hyppotunes">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HyppoTunes">
+        <activity
+            android:name=".presentation.splash.LoadingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.about.AboutActivity"
+            android:exported="true"
+            android:parentActivityName=".presentation.songInfos.SongInfosActivity" />
+        <activity
+            android:name=".presentation.player.PlayerActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".presentation.songInfos.SongInfosActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".presentation.songInfos.SongInfosActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".presentation.search.SearchActivity"
+            android:exported="true"
+            android:parentActivityName=".presentation.songInfos.SongInfosActivity" />
+
+        <service android:name=".presentation.player.PlayerService" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
